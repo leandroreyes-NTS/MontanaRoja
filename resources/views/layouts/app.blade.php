@@ -52,7 +52,7 @@
     <!-- Alpine Core -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body x-data="{ mobileMenuOpen: false }" class="font-sans text-bosque bg-piedra antialiased flex flex-col min-h-screen pb-[64px] md:pb-0 overflow-x-hidden w-full">
+<body x-data="{ mobileMenuOpen: false }" :class="mobileMenuOpen ? 'overflow-hidden' : ''" class="font-sans text-bosque bg-piedra antialiased flex flex-col min-h-screen pb-[64px] md:pb-0 overflow-x-hidden w-full">
     
     <!-- Navbar (Desktop y Mobile Absolute) -->
     <header id="main-header" class="absolute md:fixed w-full top-0 z-50 bg-transparent transition-all duration-300 hover:bg-black/80">

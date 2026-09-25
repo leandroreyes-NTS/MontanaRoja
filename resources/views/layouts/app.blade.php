@@ -7,7 +7,7 @@
     <meta name="description" content="{{ $meta_description ?? 'Camping, Restaurante & Bar en Tehuacán-Cuicatlán' }}">
     <meta property="og:title" content="{{ $title ?? 'Montaña Roja' }}">
     <meta property="og:description" content="{{ $meta_description ?? 'Camping, Restaurante & Bar en Tehuacán-Cuicatlán' }}">
-    <meta property="og:image" content="{{ asset('assets/images/IMG-20260721-WA0073.jpg') }}">
+    <meta property="og:image" content="{{ asset('assets/images/Instalaciones y senderos/001.jpg') }}">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:type" content="website">
 
@@ -15,7 +15,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $title ?? 'Montaña Roja' }}">
     <meta name="twitter:description" content="{{ $meta_description ?? 'Camping, Restaurante & Bar en Tehuacán-Cuicatlán' }}">
-    <meta name="twitter:image" content="{{ asset('assets/images/IMG-20260721-WA0073.jpg') }}">
+    <meta name="twitter:image" content="{{ asset('assets/images/Instalaciones y senderos/001.jpg') }}">
 
     <!-- Canonical & Keywords -->
     <link rel="canonical" href="{{ url()->current() }}">

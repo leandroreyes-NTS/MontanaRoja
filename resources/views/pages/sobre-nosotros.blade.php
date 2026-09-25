@@ -105,7 +105,7 @@
             <!-- Columna Izquierda: Imagen 018.jpg (Figma: 480x560px, rounded-[8px]) -->
             <div class="lg:col-span-5 flex justify-center lg:justify-start order-2 lg:order-1">
                 <div class="w-full max-w-[480px] h-[560px] overflow-hidden rounded-[8px] shadow-sm shrink-0">
-                    <img src="{{ asset('assets/images/Comida y bebidas/018.jpg') }}" 
+                    <img src="{{ asset('assets/images/instalaciones y senderos/032.jpeg') }}" 
                          alt="Gastronomía Montaña Roja" 
                          class="w-full h-full object-cover">
                 </div>

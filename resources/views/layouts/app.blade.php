@@ -184,18 +184,18 @@
             </div>
 
             <!-- Barra Inferior fiel a la captura de referencia -->
-            <div class="border-t border-stone-600/40 py-2.5 flex flex-col md:flex-row items-center justify-between text-xs text-stone-400 gap-4">
-                <p class="whitespace-nowrap">© 2026 Montaña Roja · La Casa de Tierra</p>
+            <div class="border-t border-stone-600/40 py-6 md:py-4 flex flex-col md:flex-row items-center justify-between text-xs text-stone-400 gap-6 md:gap-4 text-center md:text-left">
+                <p class="whitespace-normal md:whitespace-nowrap">© 2026 Montaña Roja · La Casa de Tierra</p>
                 
-                <a href="https://nagualstudio.tech/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 whitespace-nowrap hover:opacity-85 transition-opacity">
-                    <span class="text-xs text-stone-300 font-normal">Patrocinado y desarrollado por NAGUAL TECH STUDIO</span>
+                <a href="https://nagualstudio.tech/" target="_blank" rel="noopener noreferrer" class="flex flex-col md:flex-row items-center gap-2 md:gap-3 hover:opacity-85 transition-opacity">
+                    <span class="text-[11px] md:text-xs text-stone-300 font-normal whitespace-normal text-center px-4 md:px-0">Patrocinado y desarrollado por NAGUAL TECH STUDIO</span>
                     <img src="{{ asset('assets/logos/016.png') }}" 
                          alt="NAGUAL TECH STUDIO" 
-                         class="object-contain shrink-0" 
-                         style="width: 80px !important; height: auto !important;">
+                         class="object-contain shrink-0 mt-1 md:mt-0" 
+                         style="width: 70px !important; height: auto !important;">
                 </a>
 
-                <div class="flex items-center gap-4 whitespace-nowrap text-xs">
+                <div class="flex items-center justify-center gap-3 whitespace-normal md:whitespace-nowrap text-[11px] md:text-xs">
                     <a href="#" class="hover:text-white transition-colors">Aviso de privacidad</a>
                     <span>·</span>
                     <a href="#" class="hover:text-white transition-colors">Política de reservas</a>

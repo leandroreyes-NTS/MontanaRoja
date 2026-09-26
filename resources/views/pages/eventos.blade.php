@@ -333,23 +333,53 @@
                 <!-- Evento -->
                 <div class="flex flex-col gap-2">
                     <label class="text-xs sm:text-sm font-medium text-stone-800">¿Qué actividad te interesa?</label>
-                    <select x-model="evento" class="w-full px-3.5 py-2.5 rounded-[8px] border border-stone-300 text-stone-800 text-sm focus:outline-none focus:border-[#1E4D51] bg-white">
-                        <option value="" disabled hidden>Selecciona una opción</option>
-                        <option value="Picnic">Picnic</option>
-                        <option value="Fogata">Fogata</option>
-                        <option value="Senderismo">Senderismo</option>
-                    </select>
+                    <div x-data="{ openActividad: false }" class="relative">
+                        <button type="button" @click="openActividad = !openActividad" @click.outside="openActividad = false" 
+                            class="w-full text-left px-3.5 py-2.5 rounded-[8px] border border-stone-300 text-sm focus:outline-none focus:border-[#1E4D51] bg-white flex justify-between items-center transition-colors"
+                            :class="evento === '' ? 'text-stone-500' : 'text-stone-800'">
+                            <span x-text="evento === '' ? 'Selecciona una opción' : evento"></span>
+                            <svg class="w-4 h-4 text-stone-500 transition-transform" :class="openActividad ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        
+                        <div x-show="openActividad" x-transition.opacity.duration.200ms
+                             style="display: none;"
+                             class="absolute z-50 w-full mt-1 bg-white border border-stone-200 rounded-[8px] shadow-lg overflow-hidden py-1">
+                            <div class="max-h-[180px] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                                <template x-for="opcion in ['Picnic', 'Fogata', 'Senderismo']">
+                                    <div @click="evento = opcion; openActividad = false" 
+                                         class="px-3.5 py-2 text-[13px] cursor-pointer transition-colors"
+                                         :class="evento === opcion ? 'bg-[#fdf2f2] text-[#d83a2b] font-semibold' : 'text-stone-700 hover:bg-[#f7fefe] hover:text-[#1E4D51]'"
+                                         x-text="opcion"></div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Sub-menú Senderos -->
                 <div class="flex flex-col gap-2" x-show="evento === 'Senderismo'" style="display: none;" x-transition>
                     <label class="text-xs sm:text-sm font-medium text-stone-800">¿Qué ruta de senderismo?</label>
-                    <select x-model="sendero" class="w-full px-3.5 py-2.5 rounded-[8px] border border-stone-300 text-stone-800 text-sm focus:outline-none focus:border-[#1E4D51] bg-white">
-                        <option value="" disabled hidden>Selecciona una ruta</option>
-                        <option value="1. Dentro de Montaña Roja">1. Dentro de Montaña Roja</option>
-                        <option value="2. Parte de La Casa de Tierra">2. Parte de La Casa de Tierra</option>
-                        <option value="3. Cueva del Chentil">3. Cueva del Chentil</option>
-                    </select>
+                    <div x-data="{ openRuta: false }" class="relative">
+                        <button type="button" @click="openRuta = !openRuta" @click.outside="openRuta = false" 
+                            class="w-full text-left px-3.5 py-2.5 rounded-[8px] border border-stone-300 text-sm focus:outline-none focus:border-[#1E4D51] bg-white flex justify-between items-center transition-colors"
+                            :class="sendero === '' ? 'text-stone-500' : 'text-stone-800'">
+                            <span x-text="sendero === '' ? 'Selecciona una ruta' : sendero"></span>
+                            <svg class="w-4 h-4 text-stone-500 transition-transform" :class="openRuta ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        
+                        <div x-show="openRuta" x-transition.opacity.duration.200ms
+                             style="display: none;"
+                             class="absolute z-50 w-full mt-1 bg-white border border-stone-200 rounded-[8px] shadow-lg overflow-hidden py-1">
+                            <div class="max-h-[180px] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                                <template x-for="opcion in ['1. Dentro de Montaña Roja', '2. Parte de La Casa de Tierra', '3. Cueva del Chentil']">
+                                    <div @click="sendero = opcion; openRuta = false" 
+                                         class="px-3.5 py-2 text-[13px] cursor-pointer transition-colors"
+                                         :class="sendero === opcion ? 'bg-[#fdf2f2] text-[#d83a2b] font-semibold' : 'text-stone-700 hover:bg-[#f7fefe] hover:text-[#1E4D51]'"
+                                         x-text="opcion"></div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

@@ -376,17 +376,6 @@
                 altFormat: "j \\de F, Y",
                 disableMobile: true
             });
-            
-            // Inicializar selectores de hora (convertidos a input)
-            flatpickr("input.time-picker", {
-                enableTime: true,
-                noCalendar: true,
-                dateFormat: "H:i",
-                time_24hr: true,
-                disableMobile: true,
-                minTime: "08:00",
-                maxTime: "22:00"
-            });
         });
     </script>
 </body>

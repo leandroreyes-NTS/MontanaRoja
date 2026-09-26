@@ -366,13 +366,29 @@
                         <!-- Día de llegada -->
                         <div>
                             <label class="block text-xs font-medium text-stone-700 mb-1.5">¿Qué día llegan?</label>
-                            <input type="date" x-model="fecha" class="w-full px-3.5 py-2.5 rounded-[8px] border border-stone-300 text-stone-800 text-sm focus:outline-none focus:border-[#1E4D51]">
+                            <input type="date" x-model="fecha" placeholder="Selecciona la fecha" class="w-full px-3.5 py-2.5 rounded-[8px] border border-stone-300 text-stone-800 text-sm focus:outline-none focus:border-[#1E4D51]">
                         </div>
 
                         <!-- Hora de llegada -->
                         <div>
                             <label class="block text-xs font-medium text-stone-700 mb-1.5">¿A qué hora llegan?</label>
-                            <input type="text" x-model="hora" class="time-picker w-full px-3.5 py-2.5 rounded-[8px] border border-stone-300 text-stone-800 text-sm focus:outline-none focus:border-[#1E4D51] bg-white" placeholder="Selecciona la hora">
+                            <div class="relative">
+                                <select x-model="hora" class="w-full appearance-none px-3.5 py-2.5 rounded-[8px] border border-stone-300 text-stone-800 text-sm focus:outline-none focus:border-[#1E4D51] bg-white pr-10">
+                                    <option value="" disabled>Selecciona la hora</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="20:00">20:00</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-stone-500">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Contador de Personas -->

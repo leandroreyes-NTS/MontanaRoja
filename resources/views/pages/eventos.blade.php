@@ -317,7 +317,7 @@
                 <!-- Fecha -->
                 <div class="flex flex-col gap-2">
                     <label class="text-xs sm:text-sm font-medium text-stone-800">¿Qué día sería?</label>
-                    <input type="date" x-model="fecha" class="w-full px-3.5 py-2.5 rounded-[8px] border border-stone-300 text-stone-800 text-sm focus:outline-none focus:border-[#1E4D51] bg-white">
+                    <input type="date" x-model="fecha" placeholder="Selecciona la fecha" class="w-full px-3.5 py-2.5 rounded-[8px] border border-stone-300 text-stone-800 text-sm focus:outline-none focus:border-[#1E4D51] bg-white">
                 </div>
                 
                 <!-- Personas -->

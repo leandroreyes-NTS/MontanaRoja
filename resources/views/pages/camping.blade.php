@@ -395,13 +395,13 @@
                         <!-- Día de llegada -->
                         <div>
                             <label class="block text-xs font-medium text-stone-700 mb-1.5">¿Qué día llegan?</label>
-                            <input type="date" x-model="checkIn" class="w-full px-3.5 py-2.5 rounded-[8px] border border-stone-300 text-stone-800 text-sm focus:outline-none focus:border-[#1E4D51]">
+                            <input type="date" x-model="checkIn" placeholder="Día de llegada" class="w-full px-3.5 py-2.5 rounded-[8px] border border-stone-300 text-stone-800 text-sm focus:outline-none focus:border-[#1E4D51]">
                         </div>
 
                         <!-- Día de salida -->
                         <div>
                             <label class="block text-xs font-medium text-stone-700 mb-1.5">¿Qué día se van?</label>
-                            <input type="date" x-model="checkOut" class="w-full px-3.5 py-2.5 rounded-[8px] border border-stone-300 text-stone-800 text-sm focus:outline-none focus:border-[#1E4D51]">
+                            <input type="date" x-model="checkOut" placeholder="Día de salida" class="w-full px-3.5 py-2.5 rounded-[8px] border border-stone-300 text-stone-800 text-sm focus:outline-none focus:border-[#1E4D51]">
                         </div>
 
                         <!-- Contador Personas -->

@@ -48,6 +48,53 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    <!-- Flatpickr (Fechas con diseño Montaña Roja) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        .flatpickr-calendar {
+            font-family: 'Inter', sans-serif;
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+        .flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.selected.inRange, .flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange, .flatpickr-day.selected:focus, .flatpickr-day.startRange:focus, .flatpickr-day.endRange:focus, .flatpickr-day.selected:hover, .flatpickr-day.startRange:hover, .flatpickr-day.endRange:hover, .flatpickr-day.selected.prevMonthDay, .flatpickr-day.startRange.prevMonthDay, .flatpickr-day.endRange.prevMonthDay, .flatpickr-day.selected.nextMonthDay, .flatpickr-day.startRange.nextMonthDay, .flatpickr-day.endRange.nextMonthDay {
+            background: #d83a2b !important;
+            border-color: #d83a2b !important;
+            color: #fff !important;
+        }
+        .flatpickr-day:hover {
+            background: #fdf2f2;
+            border-color: #fdf2f2;
+        }
+        .flatpickr-months .flatpickr-month {
+            background: transparent;
+            color: #1E4D51;
+            fill: #1E4D51;
+        }
+        .flatpickr-current-month .flatpickr-monthDropdown-months {
+            font-weight: 700;
+        }
+        .flatpickr-weekdays {
+            background: transparent;
+        }
+        span.flatpickr-weekday {
+            color: #1E4D51;
+            font-weight: 600;
+        }
+        .flatpickr-months .flatpickr-prev-month, .flatpickr-months .flatpickr-next-month {
+            color: #1E4D51;
+            fill: #1E4D51;
+        }
+        .flatpickr-months .flatpickr-prev-month:hover, .flatpickr-months .flatpickr-next-month:hover {
+            color: #d83a2b;
+            fill: #d83a2b;
+        }
+        .flatpickr-time input:hover, .flatpickr-time .flatpickr-am-pm:hover, .flatpickr-time input:focus, .flatpickr-time .flatpickr-am-pm:focus {
+            background: #fdf2f2;
+        }
+    </style>
+
     <!-- Alpine Plugins -->
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <!-- Alpine Core -->
@@ -315,5 +362,31 @@
             </div>
         </div>
     </div>
+    
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/es.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Inicializar todos los inputs de fecha
+            flatpickr("input[type='date']", {
+                locale: "es",
+                dateFormat: "Y-m-d",
+                minDate: "today",
+                altInput: true,
+                altFormat: "j \\de F, Y",
+                disableMobile: true
+            });
+            
+            // Inicializar selectores de hora (convertidos a input)
+            flatpickr("input.time-picker", {
+                enableTime: true,
+                noCalendar: true,
+                dateFormat: "H:i",
+                time_24hr: true,
+                disableMobile: true,
+                minTime: "08:00",
+                maxTime: "22:00"
+            });
+        });
+    </script>
 </body>
 </html>

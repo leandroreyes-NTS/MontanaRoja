@@ -372,21 +372,25 @@
                         <!-- Hora de llegada -->
                         <div>
                             <label class="block text-xs font-medium text-stone-700 mb-1.5">¿A qué hora llegan?</label>
-                            <div class="relative">
-                                <select x-model="hora" class="w-full appearance-none px-3.5 py-2.5 rounded-[8px] border border-stone-300 text-stone-800 text-sm focus:outline-none focus:border-[#1E4D51] bg-white pr-10">
-                                    <option value="" disabled>Selecciona la hora</option>
-                                    <option value="12:00">12:00</option>
-                                    <option value="13:00">13:00</option>
-                                    <option value="14:00">14:00</option>
-                                    <option value="15:00">15:00</option>
-                                    <option value="16:00">16:00</option>
-                                    <option value="17:00">17:00</option>
-                                    <option value="18:00">18:00</option>
-                                    <option value="19:00">19:00</option>
-                                    <option value="20:00">20:00</option>
-                                </select>
-                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-stone-500">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <div x-data="{ openHora: false }" class="relative">
+                                <button type="button" @click="openHora = !openHora" @click.outside="openHora = false" 
+                                    class="w-full text-left px-3.5 py-2.5 rounded-[8px] border border-stone-300 text-sm focus:outline-none focus:border-[#1E4D51] bg-white flex justify-between items-center transition-colors"
+                                    :class="hora === '' ? 'text-stone-500' : 'text-stone-800'">
+                                    <span x-text="hora === '' ? 'Selecciona la hora' : hora"></span>
+                                    <svg class="w-4 h-4 text-stone-500 transition-transform" :class="openHora ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                                </button>
+                                
+                                <div x-show="openHora" x-transition.opacity.duration.200ms
+                                     style="display: none;"
+                                     class="absolute z-50 w-full mt-1.5 bg-white border border-stone-200 rounded-[12px] shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)] overflow-hidden py-1.5">
+                                    <div class="max-h-[220px] overflow-y-auto custom-scrollbar">
+                                        <template x-for="opcion in ['12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00']">
+                                            <div @click="hora = opcion; openHora = false" 
+                                                 class="px-4 py-2.5 text-sm cursor-pointer transition-colors"
+                                                 :class="hora === opcion ? 'bg-[#fdf2f2] text-[#d83a2b] font-semibold' : 'text-stone-700 hover:bg-[#f7fefe] hover:text-[#1E4D51]'"
+                                                 x-text="opcion"></div>
+                                        </template>
+                                    </div>
                                 </div>
                             </div>
                         </div>

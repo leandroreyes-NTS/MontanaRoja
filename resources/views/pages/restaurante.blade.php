@@ -382,11 +382,11 @@
                                 
                                 <div x-show="openHora" x-transition.opacity.duration.200ms
                                      style="display: none;"
-                                     class="absolute z-50 w-full mt-1.5 bg-white border border-stone-200 rounded-[12px] shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)] overflow-hidden py-1.5">
-                                    <div class="max-h-[220px] overflow-y-auto custom-scrollbar">
+                                     class="absolute z-50 w-full mt-1 bg-white border border-stone-200 rounded-[8px] shadow-lg overflow-hidden py-1">
+                                    <div class="max-h-[180px] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                                         <template x-for="opcion in ['12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00']">
                                             <div @click="hora = opcion; openHora = false" 
-                                                 class="px-4 py-2.5 text-sm cursor-pointer transition-colors"
+                                                 class="px-3.5 py-1.5 text-[13px] cursor-pointer transition-colors"
                                                  :class="hora === opcion ? 'bg-[#fdf2f2] text-[#d83a2b] font-semibold' : 'text-stone-700 hover:bg-[#f7fefe] hover:text-[#1E4D51]'"
                                                  x-text="opcion"></div>
                                         </template>

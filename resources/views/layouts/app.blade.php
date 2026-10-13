@@ -19,7 +19,9 @@
 
     <!-- Canonical, Favicon & Keywords -->
     <link rel="canonical" href="{{ url()->current() }}">
-    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" type="image/png" href="{{ asset('assets/logos/logo02.png') }}">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ asset('assets/logos/logo02.png') }}">
     <meta name="keywords" content="Camping, Restaurante, Bar, Tehuacán-Cuicatlán, Oaxaca, Naturaleza, Cabañas, Glamping, Río">
 
     <!-- Fonts -->
@@ -107,8 +109,10 @@
         <div class="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-16">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ route('inicio') }}" class="text-white font-sans font-bold text-[18px] tracking-wide">
-                        Montaña Roja
+                    <a href="{{ route('inicio') }}" class="flex items-center group py-1" title="Montaña Roja - Inicio">
+                        <img src="{{ asset('assets/logos/logo01.png') }}" 
+                             alt="Montaña Roja" 
+                             class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
                     </a>
                 </div>
                 

@@ -111,10 +111,10 @@
     <!-- Navbar (Desktop y Mobile Absolute) -->
     <header id="main-header" class="absolute md:fixed w-full top-0 z-50 bg-transparent transition-all duration-300 hover:bg-black/80">
         <div class="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-16">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center">
+            <div class="flex justify-center md:justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center justify-center">
                     <a href="{{ route('inicio') }}" class="flex items-center group py-1" title="Montaña Roja - Inicio">
-                        <img src="{{ asset('assets/logos/logo03.png') }}?v=1" 
+                        <img src="{{ asset('assets/logos/logo03.png') }}?v=2" 
                              alt="Montaña Roja" 
                              class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
                     </a>

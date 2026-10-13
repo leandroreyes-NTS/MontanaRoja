@@ -19,9 +19,9 @@
 
     <!-- Canonical, Favicon & Keywords -->
     <link rel="canonical" href="{{ url()->current() }}">
-    <link rel="icon" type="image/png" href="{{ asset('assets/logos/logo02.png') }}">
-    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
-    <link rel="apple-touch-icon" href="{{ asset('assets/logos/logo02.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/logos/logo02.png') }}?v=2">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}?v=2" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ asset('assets/logos/logo02.png') }}?v=2">
     <meta name="keywords" content="Camping, Restaurante, Bar, Tehuacán-Cuicatlán, Oaxaca, Naturaleza, Cabañas, Glamping, Río">
 
     <!-- Fonts -->

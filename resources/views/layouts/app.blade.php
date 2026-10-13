@@ -7,11 +7,11 @@
     <meta name="description" content="{{ $meta_description ?? 'Camping, Restaurante & Bar en Tehuacán-Cuicatlán' }}">
     <meta property="og:title" content="{{ $title ?? 'Montaña Roja' }}">
     <meta property="og:description" content="{{ $meta_description ?? 'Camping, Restaurante & Bar en Tehuacán-Cuicatlán' }}">
-    <meta property="og:image" content="{{ asset('assets/logos/og_share.jpg') }}?v=1">
-    <meta property="og:image:secure_url" content="{{ asset('assets/logos/og_share.jpg') }}?v=1">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="600">
-    <meta property="og:image:height" content="600">
+    <meta property="og:image" content="{{ asset('assets/logos/logo02.png') }}?v=4">
+    <meta property="og:image:secure_url" content="{{ asset('assets/logos/logo02.png') }}?v=4">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:type" content="website">
 
@@ -19,7 +19,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{{ $title ?? 'Montaña Roja' }}">
     <meta name="twitter:description" content="{{ $meta_description ?? 'Camping, Restaurante & Bar en Tehuacán-Cuicatlán' }}">
-    <meta name="twitter:image" content="{{ asset('assets/logos/og_share.jpg') }}?v=1">
+    <meta name="twitter:image" content="{{ asset('assets/logos/logo02.png') }}?v=4">
 
     <!-- Canonical, Favicon & Keywords -->
     <link rel="canonical" href="{{ url()->current() }}">

@@ -7,15 +7,19 @@
     <meta name="description" content="{{ $meta_description ?? 'Camping, Restaurante & Bar en Tehuacán-Cuicatlán' }}">
     <meta property="og:title" content="{{ $title ?? 'Montaña Roja' }}">
     <meta property="og:description" content="{{ $meta_description ?? 'Camping, Restaurante & Bar en Tehuacán-Cuicatlán' }}">
-    <meta property="og:image" content="{{ asset('assets/images/Instalaciones%20y%20senderos/001.jpg') }}">
+    <meta property="og:image" content="{{ asset('assets/logos/logo02.png') }}?v=3">
+    <meta property="og:image:secure_url" content="{{ asset('assets/logos/logo02.png') }}?v=3">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:type" content="website">
 
     <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{{ $title ?? 'Montaña Roja' }}">
     <meta name="twitter:description" content="{{ $meta_description ?? 'Camping, Restaurante & Bar en Tehuacán-Cuicatlán' }}">
-    <meta name="twitter:image" content="{{ asset('assets/images/Instalaciones%20y%20senderos/001.jpg') }}">
+    <meta name="twitter:image" content="{{ asset('assets/logos/logo02.png') }}?v=3">
 
     <!-- Canonical, Favicon & Keywords -->
     <link rel="canonical" href="{{ url()->current() }}">
@@ -110,7 +114,7 @@
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('inicio') }}" class="flex items-center group py-1" title="Montaña Roja - Inicio">
-                        <img src="{{ asset('assets/logos/logo01.png') }}" 
+                        <img src="{{ asset('assets/logos/logo01.png') }}?v=2" 
                              alt="Montaña Roja" 
                              class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
                     </a>

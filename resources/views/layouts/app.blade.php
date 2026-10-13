@@ -114,7 +114,7 @@
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('inicio') }}" class="flex items-center group py-1" title="Montaña Roja - Inicio">
-                        <img src="{{ asset('assets/logos/logo01.png') }}?v=2" 
+                        <img src="{{ asset('assets/logos/logo03.png') }}?v=1" 
                              alt="Montaña Roja" 
                              class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
                     </a>

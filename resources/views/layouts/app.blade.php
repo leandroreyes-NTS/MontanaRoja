@@ -110,30 +110,30 @@
     
     <!-- Navbar (Desktop y Mobile Absolute) -->
     <header id="main-header" class="absolute md:fixed w-full top-0 z-50 bg-transparent transition-all duration-300 hover:bg-black/80">
-        <div class="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-16">
-            <div class="flex justify-center md:justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center justify-center">
+        <div class="max-w-[1600px] mx-auto px-4 md:px-6 lg:px-12 xl:px-16">
+            <div class="flex justify-center md:justify-between items-center h-20 gap-2 lg:gap-4">
+                <div class="shrink-0 flex items-center justify-center">
                     <a href="{{ route('inicio') }}" class="flex items-center group py-1" title="Montaña Roja - Inicio">
                         <img src="{{ asset('assets/logos/0005.png') }}?v=2" 
                              alt="Montaña Roja" 
-                             class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                             class="h-9 md:h-9 lg:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                              style="filter: drop-shadow(0 0 1.5px rgba(0,0,0,0.95)) drop-shadow(0 1px 2px rgba(0,0,0,0.85)) drop-shadow(0 2px 5px rgba(0,0,0,0.5));">
                     </a>
                 </div>
                 
-                <nav class="hidden md:flex space-x-8 items-center border-b border-transparent">
-                    <a href="{{ route('inicio') }}" class="hover:text-white transition font-medium text-xs {{ request()->routeIs('inicio') ? 'text-white/90 border-b-2 border-white pb-1' : 'text-white/80' }}">Inicio</a>
-                    <a href="{{ route('sobre.nosotros') }}" class="hover:text-white transition font-medium text-xs {{ request()->routeIs('sobre.nosotros') ? 'text-white/90 border-b-2 border-white pb-1' : 'text-white/80' }}">Sobre nosotros</a>
-                    <a href="{{ route('camping') }}" class="hover:text-white transition font-medium text-xs {{ request()->routeIs('camping') ? 'text-white/90 border-b-2 border-white pb-1' : 'text-white/80' }}">Camping</a>
-                    <a href="{{ route('restaurante') }}" class="hover:text-white transition font-medium text-xs {{ request()->routeIs('restaurante') ? 'text-white/90 border-b-2 border-white pb-1' : 'text-white/80' }}">Restaurante <span class="font-serif">&amp;</span> Bar</a>
-                    <a href="{{ route('eventos') }}" class="hover:text-white transition font-medium text-xs {{ request()->routeIs('eventos') ? 'text-white/90 border-b-2 border-white pb-1' : 'text-white/80' }}">Actividades</a>
-                    <a href="{{ route('ubicacion') }}" class="hover:text-white transition font-medium text-xs {{ request()->routeIs('ubicacion') ? 'text-white/90 border-b-2 border-white pb-1' : 'text-white/80' }}">Ubicación</a>
+                <nav class="hidden md:flex flex-nowrap items-center shrink-0 gap-3 lg:gap-6 xl:gap-8">
+                    <a href="{{ route('inicio') }}" class="whitespace-nowrap transition font-medium text-[11px] lg:text-xs pb-1 border-b-2 {{ request()->routeIs('inicio') ? 'text-white border-white font-semibold' : 'text-white/80 border-transparent hover:text-white hover:border-white/40' }}">Inicio</a>
+                    <a href="{{ route('sobre.nosotros') }}" class="whitespace-nowrap transition font-medium text-[11px] lg:text-xs pb-1 border-b-2 {{ request()->routeIs('sobre.nosotros') ? 'text-white border-white font-semibold' : 'text-white/80 border-transparent hover:text-white hover:border-white/40' }}">Sobre nosotros</a>
+                    <a href="{{ route('camping') }}" class="whitespace-nowrap transition font-medium text-[11px] lg:text-xs pb-1 border-b-2 {{ request()->routeIs('camping') ? 'text-white border-white font-semibold' : 'text-white/80 border-transparent hover:text-white hover:border-white/40' }}">Camping</a>
+                    <a href="{{ route('restaurante') }}" class="whitespace-nowrap transition font-medium text-[11px] lg:text-xs pb-1 border-b-2 {{ request()->routeIs('restaurante') ? 'text-white border-white font-semibold' : 'text-white/80 border-transparent hover:text-white hover:border-white/40' }}">Restaurante <span class="font-serif">&amp;</span> Bar</a>
+                    <a href="{{ route('eventos') }}" class="whitespace-nowrap transition font-medium text-[11px] lg:text-xs pb-1 border-b-2 {{ request()->routeIs('eventos') ? 'text-white border-white font-semibold' : 'text-white/80 border-transparent hover:text-white hover:border-white/40' }}">Actividades</a>
+                    <a href="{{ route('ubicacion') }}" class="whitespace-nowrap transition font-medium text-[11px] lg:text-xs pb-1 border-b-2 {{ request()->routeIs('ubicacion') ? 'text-white border-white font-semibold' : 'text-white/80 border-transparent hover:text-white hover:border-white/40' }}">Ubicación</a>
                 </nav>
 
-                <div class="hidden md:flex items-center relative" x-data="{ open: false }" @click.outside="open = false">
-                    <button @click="open = !open" class="bg-[#d83a2b] hover:bg-red-700 text-white px-5 py-2.5 rounded-md font-medium transition-colors duration-300 shadow text-xs flex items-center gap-1.5">
+                <div class="hidden md:flex items-center relative shrink-0" x-data="{ open: false }" @click.outside="open = false">
+                    <button @click="open = !open" class="bg-[#d83a2b] hover:bg-red-700 text-white px-3.5 py-2 lg:px-5 lg:py-2.5 rounded-md font-medium transition-colors duration-300 shadow text-[11px] lg:text-xs flex items-center gap-1.5 whitespace-nowrap">
                         Reservar
-                        <svg class="w-3 h-3 transition-transform duration-200" :class="open ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg class="w-3 h-3 transition-transform duration-200 shrink-0" :class="open ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     
                     <!-- Dropdown Menu -->

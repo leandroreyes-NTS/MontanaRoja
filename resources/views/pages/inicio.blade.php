@@ -7,8 +7,8 @@
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
         <img src="{{ asset('assets/images/Instalaciones y senderos/001.jpg') }}" alt="Río al atardecer en Montaña Roja" class="w-full h-full object-cover">
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+        <!-- Overlay uniforme sin cortes ni lineas -->
+        <div class="absolute inset-0 bg-black/40"></div>
     </div>
     
     <div class="relative z-10 px-4 sm:px-8 lg:px-16 max-w-[1400px] mx-auto w-full">

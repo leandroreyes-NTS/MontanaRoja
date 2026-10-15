@@ -114,9 +114,10 @@
             <div class="flex justify-center md:justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center justify-center">
                     <a href="{{ route('inicio') }}" class="flex items-center group py-1" title="Montaña Roja - Inicio">
-                        <img src="{{ asset('assets/logos/0005.png') }}?v=1" 
+                        <img src="{{ asset('assets/logos/0005.png') }}?v=2" 
                              alt="Montaña Roja" 
-                             class="h-10 sm:h-12 w-auto object-contain rounded-xl transition-transform duration-300 group-hover:scale-105 shadow-sm">
+                             class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                             style="filter: drop-shadow(0 0 1.5px rgba(0,0,0,0.95)) drop-shadow(0 1px 2px rgba(0,0,0,0.85)) drop-shadow(0 2px 5px rgba(0,0,0,0.5));">
                     </a>
                 </div>
                 
@@ -266,11 +267,11 @@
         window.addEventListener('scroll', function() {
             var header = document.getElementById('main-header');
             if (window.scrollY > 10) {
-                header.classList.add('bg-black/30', 'backdrop-blur-md', 'shadow-lg');
+                header.classList.add('bg-black/85', 'backdrop-blur-md', 'shadow-lg');
                 header.classList.remove('bg-transparent', 'hover:bg-black/80');
             } else {
                 header.classList.add('bg-transparent', 'hover:bg-black/80');
-                header.classList.remove('bg-black/30', 'backdrop-blur-md', 'shadow-lg');
+                header.classList.remove('bg-black/85', 'backdrop-blur-md', 'shadow-lg');
             }
         });
     </script>
